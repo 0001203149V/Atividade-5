@@ -1,0 +1,17 @@
+programa {
+  funcao inicio() {
+    inteiro n, a, b, prox, i
+    a=1
+    b=1
+    escreva("Quantos termos de Fibonacci?:")
+    leia(n)
+    escreva(a," ",b , " ")
+    para(i = 3; i<=n; i++) {
+      prox = a + b
+      escreva(prox," ")
+      a = b
+      b = prox
+    }
+    escreva("\n")
+  }
+}
