@@ -1,0 +1,30 @@
+programa {
+  funcao inicio() {
+  inteiro numero, i, divisores
+  escreva("Digite um número inteiro positivo: ")
+  leia(numero)
+  se (numero < 2)
+  {
+    escreva(numero, " não é um número primo.")
+  }
+  senao 
+  {
+    divisores = 0
+    para (i = 1; i <= numero; i++)
+    {
+      se (numero % i == 0)
+      {
+        divisores = divisores + 1
+      }
+    }
+    se (divisores == 2)
+    {
+      escreva(numero, " é um número primo!")
+    }
+    senao 
+    {
+      escreva(numero, " não é um número primo.")
+    }
+  }
+  }
+}
