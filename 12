@@ -1,0 +1,20 @@
+programa {
+  funcao inicio() {
+  inteiro n, i, soma
+  escreva("Digite um número inteiro positivo N: ")
+  leia(n)
+  se (n < 1)
+  {
+    escreva("Digite um número maior que zero!")
+  }
+  senao
+  {
+    soma = 0
+    para (i = 1; i <= n; i++)
+    {
+      soma = soma + i
+    }
+    escreva("\nA soma dos primeiros ", n, " números naturais é: ", soma)
+  }
+  }
+}
