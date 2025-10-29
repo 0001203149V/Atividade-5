@@ -1,0 +1,23 @@
+programa {
+  funcao inicio() {
+    inteiro num1, num2, aux, mdc, mmc
+    inteiro n1, n2 
+    escreva("Digite o primeiro número: ")
+    leia(num1)
+    escreva("Digite o segundo número: ")
+    leia(num2)
+
+    n1 = num1
+    n2 = num2
+
+    enquanto (n2 != 0) {
+      aux = n1 % n2
+      n1 = n2
+      n2 = aux
+    }
+    mdc = n1
+
+    mmc = (num1 * num2) / mdc
+    escreva("\nO MMC de ", num1, " e ", num2, " é: ", mmc)
+  }
+}
