@@ -1,0 +1,28 @@
+programa {
+  funcao inicio() {
+    inteiro numero
+    inteiro soma_divisores = 0
+    inteiro divisor
+
+    escreva("Digite um número inteiro e positivo para verificar se é perfeito: ")
+    leia(numero)
+
+    se (numero <= 0) {
+      escreva("\nO número deve ser positivo. Por favor, tente novamente.\n")
+      retorne 
+    }
+      para (divisor = 1; divisor < numero; divisor++) {
+        se (numero % divisor == 0) {
+          soma_divisores = soma_divisores + divisor
+        }
+      }
+      se (soma_divisores == numero) {
+        escreva("\nO número ", numero, " É um número perfeito!")
+      } senao {
+        escreva("\nO número ", numero, " NÃO é um número perfeito.")
+        escreva("\nA soma dos divisores próprios é: ", soma_divisores)
+      }
+
+
+  }
+}
