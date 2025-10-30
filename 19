@@ -1,0 +1,53 @@
+programa {
+  inclua biblioteca Util
+
+  funcao inicio() {
+    
+    inteiro numero_secreto = 0
+    inteiro palpite = 0
+    inteiro tentativas = 0
+    const inteiro LIMITE_TENTATIVAS = 10
+    const inteiro NUMERO_MAXIMO = 100
+
+
+    numero_secreto = Util.sorteia(1, NUMERO_MAXIMO)
+
+    escreva("--- JOGO DE ADIVINHAÇÃO ---\n")
+    escreva("Tente adivinhar o número secreto entre 1 e ", NUMERO_MAXIMO, ".\n")
+    escreva("Você tem ", LIMITE_TENTATIVAS, " tentativas.\n\n")
+
+   
+    enquanto (palpite != numero_secreto e tentativas < LIMITE_TENTATIVAS)
+    {
+      tentativas = tentativas + 1
+
+      escreva("Tentativa ", tentativas, " de ", LIMITE_TENTATIVAS, ": Digite seu palpite: ")
+      leia(palpite)
+
+
+
+      se (palpite == numero_secreto)
+      {
+        escreva("\n🏆 PARABÉNS! Você acertou o número secreto (", numero_secreto, ") em ", tentativas, " tentativas!\n")
+      }
+      senao 
+      {
+        se (palpite > numero_secreto)
+        {
+          escreva("Dica: O número secreto é MENOR que ", palpite, ".\n")
+        }
+        senao
+        {
+          escreva("Dica: O número secreto é MAIOR que ", palpite, ".\n")
+        }
+      }
+    }
+
+    se (palpite != numero_secreto)
+    {
+      escreva("\n\nGAME OVER! Suas ", LIMITE_TENTATIVAS, " tentativas acabaram.\n")
+      escreva("O número secreto era: ", numero_secreto, ".\n")
+    }
+    escreva("\nFim do Jogo.\n")
+  }
+}
